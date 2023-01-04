@@ -1,26 +1,75 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base {
+  * {
+    @apply font-poppins !scroll-smooth;
   }
-  body {
-    color: white;
-    background: black;
+}
+
+@layer components {
+  .listItem {
+    @apply text-lg hover:scale-105 duration-300 cursor-pointer;
+  }
+  .grid_item {
+    @apply relative min-w-[20vw] min-h-[35vh]  md:min-h-[25vh]  md:grayscale hover:grayscale-0 cursor-pointer hover:scale-105 duration-500;
+  }
+  .form_item {
+    @apply flex flex-col;
+  }
+}
+
+@layer utilities {
+  @keyframes fill-color {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: black;
+    }
+  }
+  @keyframes line-anim {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animationBlack {
+    animation: fill-color 0.5s ease forwards 2s;
+  }
+
+  .logo_first {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 1800;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: line-anim 2s ease forwards;
+  }
+
+  .logo_second {
+    stroke-dasharray: 1700;
+    stroke-dashoffset: 1700;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: line-anim 2s ease forwards 0.3;
+  }
+
+  .logo_third {
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: line-anim 2s ease forwards 0.6;
+  }
+
+  .logo_fourth {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: line-anim 2s ease forwards 0.9;
   }
 }
