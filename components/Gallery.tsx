@@ -20,7 +20,7 @@ export default function Gallery({ obras }: Props) {
 
   return (
     <div className="md:min-h-[100vh] w-[80vw] mx-auto py-4 snap-center">
-      <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-3 md:gap-4 lg:gap-7 ">
+      <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-3 gap-4 lg:gap-7 ">
         <div className="grid_item col-span-2">
           <Image src={src_3} alt="" fill className=" object-cover" />
         </div>

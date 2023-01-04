@@ -1,6 +1,6 @@
 export default function MassLogo() {
   return (
-    <div className="md:min-h-[100vh] w-[90%] mx-auto py-20 md:py-0 flex justify-center md:items-center">
+    <div className="min-h-[60vh] md:min-h-[100vh] w-[90%] mx-auto py-20 md:py-0 flex justify-center items-center">
       <svg
         className="animationBlack"
         width="934"
