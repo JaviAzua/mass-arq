@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
+import Footer from "../../components/Footer";
 
 export interface Props {
   obras: ObrasType[];
@@ -48,16 +49,15 @@ export default function ObraInfo({ obra }: Props) {
         </div>
       </nav>
 
-      <main className="min-h-[80vh] w-[90vw] mx-auto pt-28">
-        <div className="relative flex items-center justify-center">
-          <Link href={"/#center_back"}>
-            <IoArrowBackCircleOutline className="cursor-pointer w-10 h-10 -translate-x-40 " />
-          </Link>
-          <h1 className="font-bold text-3xl py-2">{obra.name}</h1>
-        </div>
+      <main className="relative min-h-[80vh] w-[90vw] mx-auto pt-28">
+        <Link href={"/#center_back"}>
+          <IoArrowBackCircleOutline className="absolute md:left-20 cursor-pointer w-10 h-10 " />
+        </Link>
+        <h1 className="font-bold text-3xl py-2 text-center">{obra.name}</h1>
+
         <p className="py-20 text-center">{description}</p>
         <div className="pt-32">
-          <div className="relative h-[80vh] w-[90vw] md:w-[70vw] mx-auto duration-700">
+          <div className="relative h-[65vh] w-[90vw] md:w-[70vw] mx-auto duration-700">
             <Image
               onClick={() => setModal(!modal)}
               src={src && src}
@@ -81,6 +81,9 @@ export default function ObraInfo({ obra }: Props) {
           </div>
         </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
