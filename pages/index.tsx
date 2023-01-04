@@ -5,6 +5,7 @@ import Gallery from "../components/Gallery";
 import { client } from "../utils/client";
 import { ObrasType } from "../types";
 import ContactPage from "../components/ContactPage";
+import Footer from "../components/Footer";
 
 export interface Props {
   obras: ObrasType[];
@@ -21,7 +22,7 @@ export default function Home({ obras }: Props) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Navbar />
       <h1 className="hidden">MASS Estudio de Arquitectura, Argentina</h1>
       <section id="hero">
         <MassLogo />
@@ -33,6 +34,9 @@ export default function Home({ obras }: Props) {
       <section id="contact">
         <ContactPage />
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

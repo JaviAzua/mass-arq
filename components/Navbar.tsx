@@ -1,12 +1,15 @@
 import Image from "next/image";
-import { Link } from "react-scroll";
+import Link from "next/link";
+import * as Scroll from "react-scroll";
+
+let LinkS = Scroll.Link;
 
 export default function Navbar() {
   return (
     <div className="fixed z-30">
       <nav className="w-[100vw] flex bg-white justify-around items-center py-2">
         <div className="w-full flex justify-center md:block md:w-auto">
-          <Link to="hero" spy={true} smooth={true} duration={500} delay={300}>
+          <Link href={"/"}>
             <Image
               className="cursor-pointer"
               src={"/MassLogo.svg"}
@@ -18,10 +21,10 @@ export default function Navbar() {
         </div>
         <div className="md:min-w-[50vw]">
           <ul className="hidden md:flex justify-evenly">
-            <Link to="hero" spy={true} smooth={true} duration={300}>
+            <LinkS to="hero" spy={true} smooth={true} duration={300}>
               <li className="listItem">INICIO</li>
-            </Link>
-            <Link
+            </LinkS>
+            <LinkS
               to="gallery"
               spy={true}
               smooth={true}
@@ -29,11 +32,11 @@ export default function Navbar() {
               duration={300}
             >
               <li className="listItem">OBRAS</li>
-            </Link>
+            </LinkS>
 
-            <Link to="contact" spy={true} smooth={true} duration={300}>
+            <LinkS to="contact" spy={true} smooth={true} duration={300}>
               <li className="listItem">CONTACTO</li>
-            </Link>
+            </LinkS>
           </ul>
         </div>
       </nav>

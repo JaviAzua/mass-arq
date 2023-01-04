@@ -4,7 +4,7 @@ export interface ObrasType {
   _rev: string;
   _type: string;
   _updatedAt: Date;
-  description: Text;
+  description: text;
   image: SanityImageSource[];
   name: string;
   slug: Slug;
