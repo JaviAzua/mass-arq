@@ -15,7 +15,7 @@
     @apply text-lg hover:scale-105 duration-300 cursor-pointer;
   }
   .grid_item {
-    @apply relative min-w-[20vw] min-h-[35vh]  md:min-h-[25vh]  md:grayscale hover:grayscale-0 cursor-pointer hover:scale-105 duration-500;
+    @apply relative min-w-[25vw] min-h-[35vh] md:min-h-[23vh] md:grayscale hover:grayscale-0 cursor-pointer hover:scale-105 duration-500;
   }
   .form_item {
     @apply flex flex-col;

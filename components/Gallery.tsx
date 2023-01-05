@@ -27,11 +27,8 @@ export default function Gallery({ obras }: Props) {
   const src_6 = urlFor(firstImage && firstImage[5]).url();
 
   return (
-    <div
-      className="md:min-h-[100vh] w-[80vw] mx-auto py-4 snap-center"
-      id="center_back"
-    >
-      <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-3 gap-4 lg:gap-7 ">
+    <div className="md:h-[100vh] w-[80vw] mx-auto py-4 md:flex md:justify-center md:items-center">
+      <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-3 gap-4 lg:gap-4 ">
         <div className="grid_item col-span-2">
           <Link href={`obra/${obra_1.slug.current}`}>
             <Image src={src} alt="" fill className=" object-cover" />

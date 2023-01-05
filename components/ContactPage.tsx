@@ -21,7 +21,14 @@ export default function ContactPage() {
               <label htmlFor="mssj">Mensaje:</label>
               <textarea name="mssj" className="min-h-[30vh]" required />
             </div>
-            <button type="submit">E N V I A R</button>
+            <div className="text-center">
+              <button
+                className="bg-white min-w-[15vw] py-2 px-5 font-semibold hover:scale-105 duration-300"
+                type="submit"
+              >
+                E N V I A R
+              </button>
+            </div>
           </form>
         </div>
       </div>

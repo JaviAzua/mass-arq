@@ -20,10 +20,6 @@ export default function ObraInfo({ obra }: Props) {
 
   const src = urlFor(obra.image && obra?.image[imgSelect])?.url();
 
-  const handleBack = () => {
-    history.back();
-  };
-
   return (
     <div>
       <Head>
@@ -45,24 +41,32 @@ export default function ObraInfo({ obra }: Props) {
               height={250}
               alt=""
             />
+            <Image
+              className="cursor-pointer"
+              src={"/MassText.svg"}
+              width={200}
+              height={200}
+              alt=""
+            />
           </Link>
         </div>
       </nav>
 
       <main className="relative min-h-[80vh] w-[90vw] mx-auto pt-28">
-        <Link href={"/#center_back"}>
+        <Link href={"/#gallery"}>
           <IoArrowBackCircleOutline className="absolute md:left-20 cursor-pointer w-10 h-10 " />
         </Link>
         <h1 className="font-bold text-3xl py-2 text-center">{obra.name}</h1>
 
-        <p className="py-20 text-center">{description}</p>
-        <div className="pt-32">
+        <p className="py-6 text-center">{description}</p>
+        <div>
           <div className="relative h-[65vh] w-[90vw] md:w-[70vw] mx-auto duration-700">
             <Image
               onClick={() => setModal(!modal)}
               src={src && src}
               alt=""
               fill
+              quality={100}
               className="object-cover cursor-pointer"
             />
           </div>

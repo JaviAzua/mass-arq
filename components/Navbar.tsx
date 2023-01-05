@@ -17,6 +17,13 @@ export default function Navbar() {
               height={250}
               alt=""
             />
+            <Image
+              className="cursor-pointer"
+              src={"/MassText.svg"}
+              width={200}
+              height={200}
+              alt=""
+            />
           </Link>
         </div>
         <div className="md:min-w-[50vw]">
@@ -28,7 +35,7 @@ export default function Navbar() {
               to="gallery"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-50}
               duration={300}
             >
               <li className="listItem">OBRAS</li>
